@@ -1,0 +1,48 @@
+def findAngle(self, target):
+        x = target.x - self.x
+        y = target.y - self.y
+        # If X is Zero
+        if x == 0:
+            # Y is positive (Upper section)
+            if y > 0:
+                theta = 0
+            # Y is negative (Upper section)
+            else:
+                theta = 180
+        # If X is positive (Right section)
+        elif x > 0:
+            # Horizontal vector
+            if y == 0:
+                theta = 90
+            # Y is positive (Upper section)
+            elif y > 0:
+                theta = 0
+            # Y is negative (Upper section)
+            else:
+                theta = 180
+        # If X is negative (Left section)
+        else:
+            # Horizontal vector
+            if y == 0:
+                theta = 90
+            # Y is positive (Upper section)
+            elif y > 0:
+                theta = 0
+            # Y is negative (Upper section)
+            else:
+                theta = 180
+
+        self.angle = theta
+        return
+
+          # def addZombie(self, zombie):
+    #     self.zombies[zombie.id] = zombie
+
+    # def removeZombie(self, zombie):
+    #     del self.zombies[zombie.id]
+
+    # def addHuman(self, human):
+    #     self.humans.append(human)
+    
+    # def removeHuman(self, human):
+    #     del self.zombies[zombie.id]
